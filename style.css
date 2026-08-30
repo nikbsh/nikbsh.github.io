@@ -1,0 +1,193 @@
+:root {
+  color-scheme: light;
+  --text: #252525;
+  --muted: #666;
+  --light: #8a8a8a;
+  --link: #1f5fa8;
+  --rule: #e3e3e3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+}
+
+main,
+footer {
+  width: min(760px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+main {
+  padding: 72px 0 24px;
+}
+
+.profile {
+  margin-bottom: 56px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 5px;
+  font-size: 2.15rem;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.role,
+.focus {
+  margin-bottom: 2px;
+}
+
+.role {
+  color: var(--text);
+}
+
+.focus,
+.authors,
+footer {
+  color: var(--muted);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: 15px;
+  font-size: 0.94rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+section {
+  margin-bottom: 52px;
+}
+
+h2 {
+  margin-bottom: 18px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--rule);
+  font-size: 1.28rem;
+  line-height: 1.35;
+}
+
+section > p {
+  margin-bottom: 15px;
+}
+
+.year-group {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  column-gap: 22px;
+  padding: 22px 0 5px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.year-group:first-of-type {
+  padding-top: 4px;
+}
+
+h3 {
+  color: var(--light);
+  font-size: 0.91rem;
+  font-weight: 500;
+}
+
+article {
+  grid-column: 2;
+  margin-bottom: 28px;
+}
+
+h3 + article {
+  grid-row: 1;
+}
+
+h4 {
+  margin-bottom: 3px;
+  font-size: 1.02rem;
+  line-height: 1.45;
+}
+
+article p {
+  margin-bottom: 5px;
+  font-size: 0.94rem;
+}
+
+.authors {
+  font-size: 0.88rem;
+}
+
+.authors strong {
+  color: #4b4b4b;
+}
+
+.paper-links {
+  display: flex;
+  gap: 15px;
+  font-size: 0.89rem;
+}
+
+.more {
+  margin-top: 22px;
+  font-size: 0.94rem;
+}
+
+footer {
+  padding: 18px 0 44px;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 560px) {
+  main {
+    padding-top: 42px;
+  }
+
+  .profile {
+    margin-bottom: 42px;
+  }
+
+  h1 {
+    font-size: 1.85rem;
+  }
+
+  .year-group {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+
+  article,
+  h3 + article {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  h3 {
+    margin-bottom: 14px;
+  }
+}
